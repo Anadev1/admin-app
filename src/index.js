@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/styles.css';
 import UserDatabase from './components/UserDatabase';
 import Dashboard from './components/Dashboard'
 import NotFoundPage from './components/NotFoundPage';

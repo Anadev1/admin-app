@@ -1,0 +1,38 @@
+html {
+     font-size: 62.5%;
+}
+
+body {
+     font-family: 'Metropolis', 'Helvetica', 'Arial', sans-serif;
+     font-size: 1.6rem;
+}
+
+:root {
+     --primary: #1C47BD;
+     --ligh-blue: #446DFF;
+     --lighter-blue: #6B85CD;
+     --white: #f3f3f3;
+     --cta: #5DC090;
+     --accent-blue: #3BA2B9;
+}
+
+.content {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.main-container {
+     width: 85vw;
+}
+
+.page-header {
+     display: flex;
+     align-items: center;
+     padding-top: 5rem;
+     padding-left: 15rem;
+}
+
+.page-title {
+     margin-right: 7rem;
+}

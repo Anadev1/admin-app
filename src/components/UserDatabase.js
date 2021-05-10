@@ -4,7 +4,6 @@ import Navigation from './Navigation';
 
 const UserDatabase = () => {
       const [users, setUsers] = useState([]);
-  const [error, setError] = useState();
 
   useEffect(() => {
     db.collection('users').get()
@@ -19,26 +18,22 @@ const UserDatabase = () => {
         });
         setUsers(fetchedUsers);
       })
-      .catch(error => {
-        setError(error);
-      });
   }, []);
 
   return (
-    <div>
-      {error ? (
-        <p>Ops, there is an error :(</p>
-      ) : null}
-      
-            <div>
+    <div className="content">
+
           <Navigation />
-        {users.map(user => (
+            <div className="main-container">
+                 <h1 className="page-title">Users</h1>
+               {users.map(user => (
           <ul key={user.id}>
           <li>Name: {user.name}</li>
           <li>Role: {user.role}</li>
           </ul>
         ))}
-      </div>
+            </div>
+        
     </div>
   );
 }
