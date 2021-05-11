@@ -3,16 +3,10 @@ import { db } from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
-import deleteIcon from '../assets/images/delete_icon.svg';
 
-const UserDatabase = (props) => {
+const UserDatabase = () => {
 
      const [users, setUsers] = useState([]);
-     const [visibility, setVisibility] = useState('none');
-
-     const buttonsStyle = {
-          display: `${visibility}`
-     };
      
      useEffect(() => {
      db.collection('users').get()
@@ -43,7 +37,6 @@ const UserDatabase = (props) => {
                  <div className="database-container">
                     {users.map(user => (
                          <User user= {user} />
-                   
                     ))}
                  </div>          
           </div>
