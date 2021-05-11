@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/styles.css';
 import UserDatabase from './components/UserDatabase';
 import Dashboard from './components/Dashboard'
 import NotFoundPage from './components/NotFoundPage';
+import 'normalize.css/normalize.css';
+import './styles/styles.css';
 import {
   BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
+
+
 const routes = (
      <BrowserRouter>
           <Switch>

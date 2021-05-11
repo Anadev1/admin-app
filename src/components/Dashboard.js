@@ -8,7 +8,9 @@ class Dashboard extends React.Component {
                <div className="content">
                     <Navigation />
                     <div className=" main-container">
-                         <h1 className="page-title">Dashboard</h1>
+                         <div className="page-header">
+                              <h1 className="page-title">Dashboard</h1>
+                         </div>
                     </div>
                </div>
           )
