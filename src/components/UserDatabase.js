@@ -22,7 +22,7 @@ const UserDatabase = () => {
           setUsers(fetchedUsers);
           })
      }, []);
-
+     
 
   return (
     <div className="content">
