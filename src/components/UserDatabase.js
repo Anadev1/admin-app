@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
+import firebase from 'firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
+import AddUser from './AddUser';
 
 const UserDatabase = () => {
 
@@ -22,6 +24,15 @@ const UserDatabase = () => {
           setUsers(fetchedUsers);
           })
      }, []);
+
+     const handleOnDelete = id => {
+     setUsers(users.filter(user => user.id !== id))
+     firebase
+          .firestore()
+          .collection("users")
+          .doc(id)
+          .delete();
+     };
      
 
   return (
@@ -36,8 +47,9 @@ const UserDatabase = () => {
 
                  <div className="database-container">
                     {users.map(user => (
-                         <User user= {user} />
+                         <User user={user} clickHandler={handleOnDelete} />
                     ))}
+                    <AddUser />
                  </div>          
           </div>
           

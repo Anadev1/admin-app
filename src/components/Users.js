@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import deleteIcon from '../assets/images/delete_icon.svg';
-import firebase from 'firebase';
 
 const User = (props) => {
 
@@ -18,13 +17,6 @@ const User = (props) => {
      }
 
 
-     const handleOnDelete = id => {
-     firebase
-          .firestore()
-          .collection("users")
-          .doc(id)
-          .delete();
-  };
 
   return (
     
@@ -38,7 +30,7 @@ const User = (props) => {
           </div>
           <div className="user__actions-container" style={buttonsStyle}>
                <button className="user__reset-password">Reset password</button>
-               <button className="user__delete" name={props.user.id} onClick={() => handleOnDelete(props.user.id)}><img src={deleteIcon} alt="delete icon"></img></button>
+               <button className="user__delete" name={props.user.id} onClick={() => props.clickHandler(props.user.id)}><img src={deleteIcon} alt="delete icon"></img></button>
           </div>
      </div>
   );
