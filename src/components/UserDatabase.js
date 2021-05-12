@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
-import firebase from 'firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
@@ -8,31 +7,29 @@ import AddUser from './AddUser';
 
 const UserDatabase = () => {
 
-     const [users, setUsers] = useState([]);
-     
-     useEffect(() => {
-     db.collection('users').get()
-          .then(response => {
-          const fetchedUsers = [];
-          response.docs.forEach(document => {
-               const fetchedUser = {
-               id: document.id,
-               ...document.data()
-               };
-               fetchedUsers.push(fetchedUser);
-          });
-          setUsers(fetchedUsers);
-          })
-     }, []);
-
      const handleOnDelete = id => {
-     setUsers(users.filter(user => user.id !== id))
-     firebase
-          .firestore()
+     // setUsers(users.filter(user => user.id !== id))
+     db
           .collection("users")
           .doc(id)
           .delete();
      };
+
+     const [users, setUsers] = useState([]) 
+     useEffect(() => {
+     
+     const unsubscribe = db
+          .collection("users") 
+          .onSnapshot(snapshot => {
+          const listUsers = snapshot.docs.map(doc => ({
+               id: doc.id,
+               ...doc.data(),
+          }))
+          setUsers(listUsers)
+          })
+          
+     return () => unsubscribe()
+     }, [])
      
 
   return (
