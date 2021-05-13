@@ -47,9 +47,14 @@
 
 .user__reset-password {
      margin-right: 5rem;
+     font-size: 1.8rem;
      border: none;
+     background: transparent;
+     cursor: pointer;
 }
 
 .user__delete {
      border: none;
+     background: transparent;
+     cursor: pointer;
 }

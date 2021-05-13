@@ -10,6 +10,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AddUser from './components/AddUser';
 
 
 const routes = (
@@ -17,6 +18,7 @@ const routes = (
           <Switch>
                <Route path="/" component={Dashboard} exact={true} />
                <Route path="/userdatabase" component={UserDatabase} />
+               <Route path="/adduser" component={AddUser} />
                <Route component={NotFoundPage} />
           </Switch>
      </BrowserRouter>

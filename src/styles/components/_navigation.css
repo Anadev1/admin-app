@@ -31,12 +31,14 @@
 
 .navlink {
      text-decoration: none;
+}
+
+.navlink__navigation {
      height: 7rem;
      width: 15vw;
      display: flex;
      justify-content: center;
      color: white;
-
 }
 
 .navlink__container {

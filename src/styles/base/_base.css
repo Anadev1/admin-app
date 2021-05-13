@@ -33,6 +33,11 @@ body {
      padding-left: 15rem;
 }
 
+.page-header--adduser {
+     justify-content: space-between;
+     padding-right: 15rem;
+}
+
 .page-title {
      margin-right: 7rem;
 }

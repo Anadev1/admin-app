@@ -17,20 +17,20 @@ class Navigation extends React.Component {
                     </div>
                     
                     <div className="navigation__menu">
-                         <NavLink to="/" className="navlink" activeClassName="is-active" exact={true}>
+                         <NavLink to="/" className="navlink navlink__navigation" activeClassName="is-active" exact={true}>
                               <div className="navlink__container">
                                    <img src={dashboardIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Dashboard</p>
                               </div>
                          </NavLink>
 
-                         <NavLink to="/userdatabase" className="navlink" activeClassName="is-active">
+                         <NavLink to="/userdatabase" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={usersIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Users</p>
                               </div>      
                          </NavLink>
-                         <NavLink to="/usercreation" className="navlink" activeClassName="is-active">
+                         <NavLink to="/usercreation" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={jobsIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Jobs</p>
@@ -39,13 +39,13 @@ class Navigation extends React.Component {
                     </div>
 
                     <div className="navigation__settings">
-                         <NavLink to="/settings" className="navlink" activeClassName="is-active">
+                         <NavLink to="/settings" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={settingsIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Settings</p>
                               </div>      
                          </NavLink>
-                         <NavLink to="/login" className="navlink" activeClassName="is-active">
+                         <NavLink to="/login" className="navlink navlink__navigation" activeClassName="is-active">
                               <div className="navlink__container">
                                    <img src={logoutIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Log out</p>

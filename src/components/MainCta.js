@@ -6,7 +6,7 @@ class MainCta extends React.Component {
      render() {
           return(
                <div>
-                    <button className="main-cta"><img src={plusIcon} alt="plus" className="main-cta__plus-icon"></img>{this.props.title}</button>
+                    <button className={`main-cta ${this.props.className}`}><img src={plusIcon} alt="plus" className="main-cta__plus-icon"></img>{this.props.title}</button>
                </div>
           )
      }

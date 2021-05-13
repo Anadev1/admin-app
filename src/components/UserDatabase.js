@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import {NavLink } from "react-router-dom";
 import { db } from '../firebase';
 import Navigation from './Navigation';
 import MainCta from './MainCta';
 import User from './Users';
-import AddUser from './AddUser';
 
 const UserDatabase = () => {
 
      const handleOnDelete = id => {
-     // setUsers(users.filter(user => user.id !== id))
+     
      db
           .collection("users")
           .doc(id)
@@ -39,14 +39,13 @@ const UserDatabase = () => {
             <div className="main-container">
                  <div className="page-header">
                       <h1 className="page-title">Users</h1>
-                      <MainCta title="Create User" />
+                      <NavLink to="/adduser" className="navlink"><MainCta title="Create User" /></NavLink>
                  </div>
 
                  <div className="database-container">
                     {users.map(user => (
                          <User user={user} clickHandler={handleOnDelete} />
                     ))}
-                    <AddUser />
                  </div>          
           </div>
           
