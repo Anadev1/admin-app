@@ -1,0 +1,11 @@
+.charts-container {
+     margin: 5rem 15rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.chart {
+     width: 45%;
+     margin-bottom: 5rem;
+}

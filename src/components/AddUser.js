@@ -40,10 +40,10 @@ const AddUser = () => {
                               <input className="adduser__input" placeholder="Name" value={name} name="name" onChange={e => setName(e.currentTarget.value)} type="text" />
                               <input className="adduser__input" placeholder="Email" value={email} name="email" onChange={e => setEmail(e.currentTarget.value)} type="text" />
                               <input className="adduser__input" placeholder="Role" value={role} name="role" onChange={e => setRole(e.currentTarget.value)} type="text" />
-                              <div><MainCta title="Create User" className="adduser__button" /></div>
+                              <MainCta title="Create User" className="adduser__button" />
                          </form>
                     </div>          
-                    </div>
+               </div>
          
           </div>
           

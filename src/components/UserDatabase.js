@@ -15,9 +15,9 @@ const UserDatabase = () => {
           .delete();
      };
 
-     const [users, setUsers] = useState([]) 
+     const [users, setUsers] = useState([])
+     const usersName = [];
      useEffect(() => {
-     
      const unsubscribe = db
           .collection("users") 
           .onSnapshot(snapshot => {
@@ -25,16 +25,18 @@ const UserDatabase = () => {
                id: doc.id,
                ...doc.data(),
           }))
+               usersName.push(listUsers.name);
           setUsers(listUsers)
           })
           
      return () => unsubscribe()
      }, [])
      
+     
 
-  return (
+     return (
     <div className="content">
-
+          
           <Navigation />
             <div className="main-container">
                  <div className="page-header">
