@@ -63,3 +63,41 @@
 .is-active {
      background: var(--lighter-blue);
 }
+
+@media only screen and (max-width: 1440px) {
+     .navlink__name {
+          font-size: 2.2rem;
+     }
+}
+
+@media only screen and (max-width: 1200px) {
+     .navlink__name {
+          font-size: 2rem;
+     }
+
+     .navlink__icon {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1rem;
+     }
+
+     .navlink__container {
+          margin-left: 0;
+     }
+}
+
+@media only screen and (max-width: 1024px) {
+     .navlink__name {
+          font-size: 1.8rem;
+     }
+
+     .navlink__container {
+          width: 10rem;
+     }
+
+     .navlink__icon {
+          display: none;
+          width: 1.5rem;
+          height: 1.5rem;
+     }
+}

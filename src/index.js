@@ -12,7 +12,6 @@ import {
 } from "react-router-dom";
 import AddUser from './components/AddUser';
 
-
 const routes = (
      <BrowserRouter>
           <Switch>

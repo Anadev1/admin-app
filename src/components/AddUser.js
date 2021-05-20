@@ -37,9 +37,12 @@ const AddUser = () => {
 
                     <div className="adduser">
                          <form onSubmit={onSubmit} className="adduser__form">
-                              <input className="adduser__input" placeholder="Name" value={name} name="name" onChange={e => setName(e.currentTarget.value)} type="text" />
-                              <input className="adduser__input" placeholder="Email" value={email} name="email" onChange={e => setEmail(e.currentTarget.value)} type="text" />
-                              <input className="adduser__input" placeholder="Role" value={role} name="role" onChange={e => setRole(e.currentTarget.value)} type="text" />
+                              <input className="adduser__input" placeholder="Name" value={name} name="name"
+                                   onChange={e => setName(e.currentTarget.value)} type="text" />
+                              <input className="adduser__input" placeholder="Email" value={email} name="email"
+                                   onChange={e => setEmail(e.currentTarget.value)} type="text" />
+                              <input className="adduser__input" placeholder="Role" value={role} name="role"
+                                   onChange={e => setRole(e.currentTarget.value)} type="text" />
                               <MainCta title="Create User" className="adduser__button" />
                          </form>
                     </div>          

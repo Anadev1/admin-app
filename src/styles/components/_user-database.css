@@ -18,11 +18,11 @@
      font-weight: normal;
 }
 
-.user__role-admin {
+.user__role--admin {
      color: #5DC090;
 }
 
-.user__role-member {
+.user__role--member {
      color: #1C47BD;
 }
 
