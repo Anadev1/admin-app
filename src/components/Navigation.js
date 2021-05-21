@@ -17,7 +17,7 @@ class Navigation extends React.Component {
                     </div>
                     
                     <div className="navigation__menu">
-                         <NavLink to="/" className="navlink navlink__navigation" activeClassName="is-active" exact={true}>
+                         <NavLink to="/admin-app" className="navlink navlink__navigation" activeClassName="is-active" exact={true}>
                               <div className="navlink__container">
                                    <img src={dashboardIcon} className="navlink__icon"></img>
                                    <p className="navlink__name">Dashboard</p>
