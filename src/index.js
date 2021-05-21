@@ -15,7 +15,7 @@ import AddUser from './components/AddUser';
 const routes = (
      <BrowserRouter>
           <Switch>
-               <Route path="/" component={Dashboard} exact={true} />
+               <Route path="/admin-app" component={Dashboard} exact={true} />
                <Route path="/userdatabase" component={UserDatabase} />
                <Route path="/adduser" component={AddUser} />
                <Route component={NotFoundPage} />
